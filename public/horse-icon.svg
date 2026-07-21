@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c5a059;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4af37;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="#05010D"/>
+  <path d="M20 42 Q18 38 20 34 L22 30 Q24 26 28 24 L32 22 Q36 20 40 22 L44 26 Q46 30 44 34 L42 38 Q40 42 36 44 L32 46 Q28 48 24 46 L20 42" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+  <path d="M32 22 L34 18 L36 22" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+  <path d="M28 24 L26 20 L30 22" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+  <circle cx="34" cy="26" r="2" fill="#d4af37"/>
+  <path d="M22 34 L18 32 L20 30" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+  <path d="M42 34 L46 32 L44 30" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+  <path d="M24 42 L20 44 L22 46" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+  <path d="M40 42 L44 44 L42 46" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+</svg>
