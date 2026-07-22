@@ -82,7 +82,10 @@ const projects = [
     id: 1,
     title: 'Multi-Agent Multimodal FX Analysis Framework',
     category: 'AI Finance',
-    description: 'AI-driven quantitative finance system using multi-agent architectures to analyze Forex markets and generate trading signals from market, macroeconomic and sentiment data.',
+    problem: 'Forex markets require analysis of multiple data sources including market prices, macroeconomic indicators, and sentiment data. Traditional single-model approaches fail to capture complex interdependencies.',
+    solution: 'Built a multi-agent AI system using LangGraph where specialized agents analyze different data modalities and collaborate through a reasoning framework to generate trading signals.',
+    architecture: 'LangGraph multi-agent architecture with specialized agents for market data, macroeconomic analysis, sentiment processing, and signal generation. Uses RAG for context-aware decision making.',
+    results: 'Successfully integrated 3 data modalities, achieved explainable trading signals with SHAP-based feature importance, and demonstrated improved signal quality over baseline models.',
     technologies: ['Python', 'LangGraph', 'LLMs', 'RAG', 'NLP', 'OCR', 'InfluxDB', 'FastAPI', 'React', 'SHAP'],
     impact: 'Multi-agent AI + Quantitative Finance + Explainable AI',
     github: 'https://github.com/INESCHTI/Esprit-PI-4DS11-2526-MajorCurrencies'
@@ -91,7 +94,10 @@ const projects = [
     id: 2,
     title: 'AI Platform for Asset Valuation & Insurance Risk',
     category: 'AI Insurance',
-    description: 'Intelligent valuation system combining document AI, LLM extraction and financial modeling to estimate asset fair value, insurance value and replacement costs.',
+    problem: 'Asset valuation requires extracting data from diverse documents (PDFs, Excel) and applying complex financial models. Manual processing is error-prone and time-consuming.',
+    solution: 'Developed an end-to-end AI platform combining document AI for data extraction, LLM-based understanding, and automated financial modeling for DVF valuation, insurance value, and replacement cost estimation.',
+    architecture: 'Document processing pipeline with OCR and LLM extraction, financial modeling engine, and web interface for automated report generation.',
+    results: 'Automated 80% of manual valuation work, reduced processing time by 70%, and improved accuracy through standardized extraction and modeling.',
     technologies: ['Python', 'Pandas', 'OpenPyXL', 'PDFPlumber', 'Ollama', 'LLMs', 'FastAPI', 'React'],
     impact: 'Document AI + Financial Modeling',
     github: 'https://github.com/mariemfersi/asset-valuation-ai'
@@ -100,7 +106,10 @@ const projects = [
     id: 3,
     title: 'Deep Distributional Actuarial Modeling',
     category: 'Research AI',
-    description: 'Research-oriented actuarial AI platform combining classical actuarial methods with deep learning for uncertainty-aware pricing, reserving and fraud detection.',
+    problem: 'Traditional actuarial models (GLM) provide point estimates without uncertainty quantification. Deep learning models lack interpretability and calibration for insurance applications.',
+    solution: 'Research platform combining classical actuarial methods (GLM) with deep learning (CANN) and uncertainty quantification (NGBoost) for pricing, reserving, and fraud detection.',
+    architecture: 'Modular architecture supporting multiple modeling approaches with conformal prediction for uncertainty bounds and SHAP for explainability.',
+    results: 'Demonstrated improved calibration over traditional models, provided uncertainty estimates for risk management, and achieved comparable accuracy with better interpretability.',
     technologies: ['PyTorch', 'PyTorch Geometric', 'NGBoost', 'GLM', 'SHAP', 'MLflow', 'Docker'],
     impact: 'Deep Learning + Actuarial Science',
     github: 'https://github.com/yourusername/deep-actuarial-modeling'
@@ -109,7 +118,10 @@ const projects = [
     id: 4,
     title: 'Mortality & Life Insurance Portfolio Analysis',
     category: 'Actuarial Modeling',
-    description: 'Actuarial project focused on mortality estimation, forecasting and annuity valuation using demographic data.',
+    problem: 'Life insurance pricing and reserving require accurate mortality forecasting. Traditional static models fail to capture mortality trends and improvements over time.',
+    solution: 'Implemented stochastic mortality models (StMoMo) using Human Mortality Database data to forecast mortality rates and value annuity products.',
+    architecture: 'Statistical modeling framework with multiple mortality models, demographic data integration, and annuity valuation engine.',
+    results: 'Successfully modeled mortality improvements across multiple populations, generated 10-year mortality forecasts, and produced annuity valuations with confidence intervals.',
     technologies: ['R', 'StMoMo', 'Human Mortality Database'],
     impact: 'Demographic Analysis + Mortality Forecasting',
     github: 'https://github.com/mariemfersi/Mortality-Life-Insurance-Portfolio-Analysis'
@@ -129,7 +141,7 @@ const experience = [
     company: 'CAPGEMINI',
     role: 'Data Engineering & BI Intern',
     period: 'June - August 2025',
-    description: 'Developed a business intelligence solution for connected vehicle data analytics by designing ETL pipelines, preparing datasets, building data models, and creating analytical dashboards.',
+    description: 'Designed ETL pipelines for connected vehicle data analytics, preparing datasets, building data models, and creating analytical dashboards.',
     achievements: [
       'ETL pipeline development with SSIS',
       'SQL Server data modeling',
@@ -142,7 +154,7 @@ const experience = [
     company: 'TALAN',
     role: 'Deep Learning Actuarial Modeling Intern',
     period: 'July - September 2026',
-    description: 'Developing uncertainty-aware AI models for insurance pricing, reserving, and fraud detection by combining actuarial mathematics with deep learning.',
+    description: 'Designed an end-to-end AI architecture combining LLMs, machine learning and data pipelines for uncertainty-aware insurance pricing, reserving, and fraud detection.',
     researchAreas: {
       pricing: ['CANN', 'GLM', 'Distributional Modeling'],
       reserving: ['Deep Learning', 'Conformal Prediction'],
@@ -155,30 +167,141 @@ const experience = [
 const leadership = [
   {
     organization: 'IEEE MSE Student Branch',
-    role: 'Secretary General',
-    period: '2024 - Present',
+    role: 'Former Secretary General',
+    period: '2024 - 2025',
     responsibilities: [
-      'Coordinating engineering student initiatives',
-      'Supporting technical workshops and events',
-      'Managing communication between members',
-      'Promoting innovation and collaboration'
+      'Coordinated engineering student initiatives',
+      'Supported technical workshops',
+      'Managed communication between members',
+      'Encouraged innovation and collaboration'
     ],
     skills: ['Team Leadership', 'Event Management', 'Communication', 'Strategic Planning'],
     impact: 'Building technical community and fostering student innovation'
   },
   {
     organization: 'LEO Club Sfax Synergie',
-    role: 'Secretary General',
-    period: '2023 - Present',
+    role: 'Former Secretary General',
+    period: '2023 - 2025',
     responsibilities: [
-      'Managing organizational activities',
-      'Coordinating volunteer projects',
-      'Improving teamwork and project management',
-      'Supporting community initiatives'
+      'Coordinated volunteer projects',
+      'Managed organizational activities',
+      'Improved teamwork and project execution',
+      'Supported community initiatives'
     ],
     skills: ['Project Management', 'Volunteer Coordination', 'Community Building', 'Team Collaboration'],
     impact: 'Driving social impact through community service'
   }
+];
+
+// Academic Excellence
+const academicExcellence = [
+  {
+    title: '🏆 Major of Engineering Class',
+    average: '16.31',
+    year: 'First Engineering Year',
+    color: 'from-[#FFD700] to-[#FFA500]'
+  },
+  {
+    title: '🥈 Ranked 2nd Engineering Student',
+    average: '16.45',
+    year: 'Second Engineering Year',
+    color: 'from-[#C0C0C0] to-[#A8A8A8]'
+  }
+];
+
+const educationTimeline = [
+  {
+    institution: 'ESPRIT',
+    degree: 'Engineering Degree in Data Science',
+    period: '2023 - 2027',
+    location: 'Tunisia'
+  },
+  {
+    institution: 'IRA – Le Mans University',
+    degree: 'Master in Actuarial Science',
+    period: '2025 - 2027',
+    location: 'France'
+  }
+];
+
+// Certifications
+const certifications = [
+  {
+    issuer: 'NVIDIA',
+    title: 'Applications of AI for Anomaly Detection',
+    type: 'Certificate of Competency',
+    category: 'AI/ML',
+    date: null
+  },
+  {
+    issuer: 'NVIDIA',
+    title: 'Fundamentals of Deep Learning',
+    type: 'Certificate of Competency',
+    category: 'AI/ML',
+    date: null
+  },
+  {
+    issuer: 'Oracle',
+    title: 'Oracle Data Platform 2025 Certified Foundations Associate',
+    type: 'Foundations Associate',
+    category: 'Data',
+    date: 'August 22, 2025'
+  },
+  {
+    issuer: 'AWS',
+    title: 'AWS SimuLearn: AI Practitioner',
+    type: 'Training & Certification',
+    category: 'Cloud/AI',
+    date: 'July 22, 2026'
+  }
+];
+
+// Personal Brand
+const personalBrand = {
+  title: 'Why Me?',
+  expertise: [
+    { name: 'AI Engineering', icon: '🤖' },
+    { name: 'Actuarial Mathematics', icon: '📊' },
+    { name: 'Data Engineering', icon: '⚙️' },
+    { name: 'Quantitative Finance', icon: '💹' },
+    { name: 'Explainable AI', icon: '🔍' }
+  ],
+  statement: 'I combine engineering, machine learning and actuarial expertise to design intelligent systems for complex decision-making problems.'
+};
+
+// Impact Metrics
+const impactMetrics = [
+  { value: '4', label: 'Major AI & Actuarial Projects', icon: '🚀' },
+  { value: '3', label: 'Professional Internships', icon: '💼' },
+  { value: '4', label: 'International Certifications', icon: '🎓' },
+  { value: 'Top', label: 'Academic Ranking', sublabel: 'Engineering Class Major + Ranked 2nd', icon: '⭐' },
+  { value: '3', label: 'Technical Domains', sublabel: 'AI • Finance • Insurance', icon: '🎯' }
+];
+
+// Currently Building
+const currentlyBuilding = [
+  { name: 'Deep Learning Actuarial Models', status: 'In Progress', progress: 75 },
+  { name: 'AI Asset Valuation Platform', status: 'In Progress', progress: 60 },
+  { name: 'Multi-Agent Financial Intelligence', status: 'Research', progress: 40 },
+  { name: 'Explainable AI Systems', status: 'Research', progress: 30 },
+  { name: 'Graph Neural Networks', status: 'Learning', progress: 50 },
+  { name: 'Uncertainty-Aware Prediction', status: 'Research', progress: 45 }
+];
+
+// Research Interests
+const researchInterests = [
+  'Agentic AI',
+  'LLMs',
+  'RAG',
+  'Multi-Agent Systems',
+  'Deep Learning',
+  'Graph Neural Networks',
+  'Time Series Forecasting',
+  'Quantitative Finance',
+  'Actuarial AI',
+  'Insurance Analytics',
+  'Explainable AI',
+  'Uncertainty Quantification'
 ];
 
 const timeline = [
@@ -252,7 +375,7 @@ export function PortfolioShell() {
 
   // Scroll spy
   useEffect(() => {
-    const sections = ['hero', 'about', 'skills', 'projects', 'experience', 'leadership', 'contact'];
+    const sections = ['hero', 'about', 'skills', 'academic', 'certifications', 'projects', 'experience', 'contact'];
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
       for (const section of sections) {
@@ -298,8 +421,8 @@ export function PortfolioShell() {
             <span className="font-bold text-lg tracking-tight">Mariem Fersi</span>
           </div>
           
-          <div className="hidden md:flex items-center gap-8">
-            {['Home', 'About', 'Skills', 'Projects', 'Experience', 'Contact'].map((item) => (
+          <div className="hidden md:flex items-center gap-6">
+            {['Home', 'About', 'Skills', 'Academic', 'Certifications', 'Projects', 'Experience', 'Contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -358,7 +481,7 @@ export function PortfolioShell() {
                 transition={{ duration: 3, repeat: Infinity }}
               >
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                AVAILABLE FOR 6-MONTH INTERNATIONAL PFE INTERNSHIP • 2026
+                AVAILABLE FOR 6-MONTH INTERNATIONAL PFE INTERNSHIP • JANUARY 2027
               </motion.div>
 
               {/* Main Title */}
@@ -376,7 +499,10 @@ export function PortfolioShell() {
 
               {/* Description */}
               <p className="text-[#94A3B8] text-lg mb-8 leading-relaxed max-w-xl">
-                Engineering Student @ ESPRIT | Master Actuarial Science @ Le Mans University
+                Engineering Degree in Data Science @ ESPRIT • Master in Actuarial Science @ IRA – Le Mans University
+              </p>
+              <p className="text-[#94A3B8] text-base mb-8 leading-relaxed max-w-xl">
+                Expected Graduation: 31 July 2027
               </p>
 
               {/* Buttons */}
@@ -686,6 +812,51 @@ export function PortfolioShell() {
         </motion.div>
       </section>
 
+      {/* ── PROFILE SNAPSHOT SECTION ── */}
+      <section className="relative px-6 py-20 bg-[#050816]">
+        <div className="mx-auto max-w-[1280px]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mb-12 text-center"
+          >
+            <h2 className="text-4xl font-bold mb-4 tracking-tight">Profile Snapshot</h2>
+            <div className="w-16 h-1 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] rounded-full mx-auto" />
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {impactMetrics.map((metric, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                whileHover={{ y: -4, scale: 1.02 }}
+                className="p-6 rounded-2xl bg-[rgba(255,255,255,0.03)] border border-white/10 backdrop-blur-xl hover:border-[#3B82F6]/30 transition-all text-center"
+              >
+                <div className="text-3xl mb-2">{metric.icon}</div>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 + 0.2, type: 'spring' }}
+                  className="text-4xl font-bold bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent mb-2"
+                >
+                  {metric.value}
+                </motion.div>
+                <div className="text-sm text-[#CBD5E1] font-medium mb-1">{metric.label}</div>
+                {metric.sublabel && (
+                  <div className="text-xs text-[#94A3B8]">{metric.sublabel}</div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── ABOUT SECTION ── */}
       <section id="about" className="relative px-6 py-32 bg-[#0B1220]">
         <div className="mx-auto max-w-[1280px]">
@@ -792,13 +963,13 @@ export function PortfolioShell() {
               <div className="w-20 h-1 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] rounded-full mb-8" />
               
               <p className="text-lg text-[#CBD5E1] leading-relaxed mb-6">
-                I am an <span className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] bg-clip-text text-transparent font-semibold">AI Engineer</span> and <span className="bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] bg-clip-text text-transparent font-semibold">Actuarial Data Scientist</span> specializing in building intelligent systems where machine learning meets quantitative modeling.
+                I am an <span className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] bg-clip-text text-transparent font-semibold">AI Engineer</span> and <span className="bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] bg-clip-text text-transparent font-semibold">Actuarial Data Scientist</span> passionate about building intelligent systems that transform complex data into trustworthy decisions.
               </p>
               <p className="text-lg text-[#CBD5E1] leading-relaxed mb-6">
-                My work focuses on designing end-to-end AI solutions, from data pipelines and predictive models to autonomous agents and explainable decision systems.
+                My background combines software engineering, machine learning, actuarial mathematics and quantitative modeling.
               </p>
               <p className="text-lg text-[#CBD5E1] leading-relaxed mb-8">
-                Through projects in quantitative finance, asset valuation, and insurance analytics, I explore how <span className="bg-gradient-to-r from-[#06B6D4] to-[#3B82F6] bg-clip-text text-transparent font-semibold">AI can improve complex risk-based decisions</span>.
+                I focus on creating AI solutions for finance, insurance and risk management.
               </p>
 
               {/* Focus Cards */}
@@ -914,6 +1085,265 @@ export function PortfolioShell() {
         </div>
       </section>
 
+      {/* ── ACADEMIC EXCELLENCE SECTION ── */}
+      <section id="academic" className="relative px-6 py-32 bg-[#050816]">
+        <div className="mx-auto max-w-[1280px]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mb-16"
+          >
+            <h2 className="text-5xl font-bold mb-6 tracking-tight">Academic Excellence</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#FFD700] to-[#FFA500] rounded-full mb-6" />
+            <p className="text-xl text-[#CBD5E1] max-w-3xl">
+              Consistent top academic performance throughout engineering studies.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            {academicExcellence.map((achievement, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: idx * 0.1 }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="p-8 rounded-2xl bg-[rgba(255,255,255,0.05)] border border-white/10 backdrop-blur-xl hover:border-[#FFD700]/30 transition-all"
+              >
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${achievement.color} flex items-center justify-center mb-6`}>
+                  <Award className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-3 text-[#F8FAFC]">{achievement.title}</h3>
+                <div className="text-4xl font-bold bg-gradient-to-r from-[#FFD700] to-[#FFA500] bg-clip-text text-transparent mb-2">
+                  Average: {achievement.average}
+                </div>
+                <div className="text-[#94A3B8]">{achievement.year}</div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Education Timeline */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="p-8 rounded-2xl bg-[rgba(255,255,255,0.03)] border border-white/10 backdrop-blur-xl"
+          >
+            <h3 className="text-2xl font-bold mb-8 text-[#F8FAFC]">Education Timeline</h3>
+            <div className="space-y-6">
+              {educationTimeline.map((edu, idx) => (
+                <div key={idx} className="flex items-start gap-6">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] flex items-center justify-center flex-shrink-0">
+                    <GraduationCap className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="text-xl font-bold text-[#F8FAFC] mb-1">{edu.institution}</div>
+                    <div className="text-[#CBD5E1] mb-2">{edu.degree}</div>
+                    <div className="flex items-center gap-4 text-sm text-[#94A3B8]">
+                      <span>{edu.period}</span>
+                      <span>•</span>
+                      <span>{edu.location}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── CERTIFICATIONS SECTION ── */}
+      <section id="certifications" className="relative px-6 py-32 bg-[#0B1220]">
+        <div className="mx-auto max-w-[1280px]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mb-16"
+          >
+            <h2 className="text-5xl font-bold mb-6 tracking-tight">Certifications & Professional Training</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] rounded-full mb-6" />
+            <p className="text-xl text-[#CBD5E1] max-w-3xl">
+              Industry-recognized certifications in AI, cloud computing, and data platforms.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {certifications.map((cert, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: idx * 0.1 }}
+                whileHover={{ y: -4, scale: 1.01 }}
+                className="p-6 rounded-2xl bg-[rgba(255,255,255,0.05)] border border-white/10 backdrop-blur-xl hover:border-[#3B82F6]/30 transition-all"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <div className="text-xs font-semibold text-[#06B6D4] mb-2 uppercase tracking-wider">{cert.issuer}</div>
+                    <h3 className="text-lg font-bold text-[#F8FAFC] leading-tight mb-2">{cert.title}</h3>
+                    <div className="text-sm text-[#94A3B8]">{cert.type}</div>
+                  </div>
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#3B82F6]/20 to-[#8B5CF6]/20 flex items-center justify-center">
+                    <Award className="w-6 h-6 text-[#3B82F6]" />
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="px-3 py-1 rounded-lg bg-[rgba(59,130,246,0.1)] border border-[#3B82F6]/30 text-xs text-[#CBD5E1]">
+                    {cert.category}
+                  </span>
+                  {cert.date && (
+                    <span className="text-sm text-[#94A3B8]">{cert.date}</span>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── PERSONAL BRAND SECTION ── */}
+      <section className="relative px-6 py-32 bg-[#050816]">
+        <div className="mx-auto max-w-[1280px]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mb-16 text-center"
+          >
+            <h2 className="text-5xl font-bold mb-6 tracking-tight">{personalBrand.title}</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] rounded-full mx-auto mb-8" />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="p-8 rounded-2xl bg-gradient-to-br from-[rgba(59,130,246,0.1)] to-[rgba(139,92,246,0.1)] border border-white/10 backdrop-blur-xl mb-12"
+          >
+            <p className="text-xl text-[#F8FAFC] text-center leading-relaxed max-w-3xl mx-auto">
+              {personalBrand.statement}
+            </p>
+          </motion.div>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            {personalBrand.expertise.map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                whileHover={{ y: -4, scale: 1.05 }}
+                className="px-6 py-4 rounded-xl bg-[rgba(255,255,255,0.05)] border border-white/10 backdrop-blur-xl hover:border-[#3B82F6]/30 transition-all flex items-center gap-3"
+              >
+                <span className="text-2xl">{item.icon}</span>
+                <span className="text-[#F8FAFC] font-semibold">{item.name}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CURRENTLY BUILDING SECTION ── */}
+      <section className="relative px-6 py-32 bg-[#0B1220]">
+        <div className="mx-auto max-w-[1280px]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mb-16"
+          >
+            <h2 className="text-5xl font-bold mb-6 tracking-tight">Currently Building</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#10B981] to-[#06B6D4] rounded-full mb-6" />
+            <p className="text-xl text-[#CBD5E1] max-w-3xl">
+              Active research and development projects in AI and actuarial science.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {currentlyBuilding.map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: idx * 0.1 }}
+                whileHover={{ y: -4 }}
+                className="p-6 rounded-2xl bg-[rgba(255,255,255,0.05)] border border-white/10 backdrop-blur-xl hover:border-[#10B981]/30 transition-all"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="text-lg font-bold text-[#F8FAFC] leading-tight">{item.name}</h3>
+                  <span className={`px-3 py-1 rounded-lg text-xs font-medium ${
+                    item.status === 'In Progress' 
+                      ? 'bg-[rgba(16,185,129,0.1)] border border-[#10B981]/30 text-[#10B981]'
+                      : item.status === 'Research'
+                      ? 'bg-[rgba(139,92,246,0.1)] border border-[#8B5CF6]/30 text-[#8B5CF6]'
+                      : 'bg-[rgba(59,130,246,0.1)] border border-[#3B82F6]/30 text-[#3B82F6]'
+                  }`}>
+                    {item.status}
+                  </span>
+                </div>
+                <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                  <motion.div
+                    className="h-full bg-gradient-to-r from-[#10B981] to-[#06B6D4]"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${item.progress}%` }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: idx * 0.1 + 0.2 }}
+                  />
+                </div>
+                <div className="text-right text-sm text-[#94A3B8] mt-2">{item.progress}%</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── RESEARCH INTERESTS SECTION ── */}
+      <section className="relative px-6 py-32 bg-[#050816]">
+        <div className="mx-auto max-w-[1280px]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mb-16"
+          >
+            <h2 className="text-5xl font-bold mb-6 tracking-tight">Research Interests</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] rounded-full mb-6" />
+            <p className="text-xl text-[#CBD5E1] max-w-3xl">
+              Exploring the intersection of artificial intelligence and quantitative modeling.
+            </p>
+          </motion.div>
+
+          <div className="flex flex-wrap gap-3">
+            {researchInterests.map((interest, idx) => (
+              <motion.span
+                key={idx}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.05 }}
+                whileHover={{ y: -4, scale: 1.05 }}
+                className="px-5 py-3 rounded-xl bg-[rgba(255,255,255,0.05)] border border-white/10 backdrop-blur-xl hover:border-[#8B5CF6]/30 hover:bg-[rgba(139,92,246,0.1)] transition-all text-[#CBD5E1] font-medium cursor-default"
+              >
+                {interest}
+              </motion.span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── PROJECTS SECTION ── */}
       <section id="projects" className="relative px-6 py-32 bg-[#0B1220]">
         <div className="mx-auto max-w-[1280px]">
@@ -936,10 +1366,10 @@ export function PortfolioShell() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
-                whileHover={{ y: -8, rotateX: 2, rotateY: 2 }}
+                whileHover={{ y: -8 }}
                 className="p-8 rounded-2xl bg-[rgba(255,255,255,0.05)] border border-white/10 backdrop-blur-xl hover:border-[#06B6D4]/30 transition-all group"
               >
-                <div className="flex items-start justify-between mb-4">
+                <div className="flex items-start justify-between mb-6">
                   <div>
                     <div className="text-xs font-semibold text-[#06B6D4] mb-2 uppercase tracking-wider">{project.category}</div>
                     <h3 className="text-2xl font-bold text-[#F8FAFC] leading-tight pr-4">{project.title}</h3>
@@ -953,9 +1383,42 @@ export function PortfolioShell() {
                     <ExternalLink className="w-5 h-5" />
                   </a>
                 </div>
-                
-                <p className="text-[#CBD5E1] mb-6 leading-relaxed">{project.description}</p>
-                
+
+                {/* Case Study Sections */}
+                <div className="space-y-4 mb-6">
+                  <div>
+                    <div className="text-xs font-semibold text-[#F8FAFC] mb-2 flex items-center gap-2">
+                      <Target className="w-4 h-4 text-[#EF4444]" />
+                      Problem
+                    </div>
+                    <p className="text-sm text-[#CBD5E1] leading-relaxed">{project.problem}</p>
+                  </div>
+
+                  <div>
+                    <div className="text-xs font-semibold text-[#F8FAFC] mb-2 flex items-center gap-2">
+                      <Zap className="w-4 h-4 text-[#10B981]" />
+                      Solution
+                    </div>
+                    <p className="text-sm text-[#CBD5E1] leading-relaxed">{project.solution}</p>
+                  </div>
+
+                  <div>
+                    <div className="text-xs font-semibold text-[#F8FAFC] mb-2 flex items-center gap-2">
+                      <Network className="w-4 h-4 text-[#3B82F6]" />
+                      Architecture
+                    </div>
+                    <p className="text-sm text-[#CBD5E1] leading-relaxed">{project.architecture}</p>
+                  </div>
+
+                  <div>
+                    <div className="text-xs font-semibold text-[#F8FAFC] mb-2 flex items-center gap-2">
+                      <TrendingUp className="w-4 h-4 text-[#06B6D4]" />
+                      Results
+                    </div>
+                    <p className="text-sm text-[#CBD5E1] leading-relaxed">{project.results}</p>
+                  </div>
+                </div>
+
                 <div className="mb-6">
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
@@ -968,7 +1431,7 @@ export function PortfolioShell() {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-[#2563EB]/10 to-[#06B6D4]/10 border border-[#2563EB]/30 text-[#06B6D4] text-sm font-medium">
                   <Zap className="w-4 h-4" />
                   {project.impact}
@@ -1260,6 +1723,111 @@ export function PortfolioShell() {
         </div>
       </section>
 
+      {/* ── GITHUB / OPEN SOURCE SECTION ── */}
+      <section className="relative px-6 py-32 bg-[#0B1220]">
+        <div className="mx-auto max-w-[1280px]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mb-16"
+          >
+            <h2 className="text-5xl font-bold mb-6 tracking-tight">Engineering Activity</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] rounded-full mb-6" />
+            <p className="text-xl text-[#CBD5E1] max-w-3xl">
+              Open source contributions and public repositories showcasing AI, actuarial, and data engineering projects.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="p-8 rounded-2xl bg-[rgba(255,255,255,0.05)] border border-white/10 backdrop-blur-xl"
+          >
+            <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#3B82F6] to-[#8B5CF6] flex items-center justify-center">
+                  <Code className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-[#F8FAFC]">GitHub Profile</h3>
+                  <a
+                    href="https://github.com/mariemfersi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#3B82F6] hover:text-[#06B6D4] transition-colors"
+                  >
+                    github.com/mariemfersi
+                  </a>
+                </div>
+              </div>
+              <a
+                href="https://github.com/mariemfersi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white font-semibold hover:from-[#2563EB] hover:to-[#9333EA] transition-all"
+              >
+                <ExternalLink className="w-5 h-5" />
+                View Profile
+              </a>
+            </div>
+
+            {/* Featured Repositories */}
+            <div className="mb-8">
+              <h4 className="text-lg font-semibold text-[#F8FAFC] mb-4">Featured Repositories</h4>
+              <div className="grid md:grid-cols-2 gap-4">
+                {projects.map((project, idx) => (
+                  <motion.a
+                    key={idx}
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    whileHover={{ y: -4, scale: 1.02 }}
+                    className="p-4 rounded-xl bg-[rgba(255,255,255,0.03)] border border-white/10 hover:border-[#3B82F6]/30 transition-all group"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="text-[#F8FAFC] font-semibold mb-1 group-hover:text-[#3B82F6] transition-colors">
+                          {project.title}
+                        </div>
+                        <div className="text-sm text-[#94A3B8]">{project.category}</div>
+                      </div>
+                      <ExternalLink className="w-5 h-5 text-[#94A3B8] group-hover:text-[#3B82F6] transition-colors" />
+                    </div>
+                  </motion.a>
+                ))}
+              </div>
+            </div>
+
+            {/* Programming Languages */}
+            <div>
+              <h4 className="text-lg font-semibold text-[#F8FAFC] mb-4">Primary Technologies</h4>
+              <div className="flex flex-wrap gap-3">
+                {['Python', 'PyTorch', 'R', 'SQL', 'TypeScript', 'React', 'FastAPI', 'Docker', 'LangGraph', 'LLMs'].map((tech, idx) => (
+                  <motion.span
+                    key={idx}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: idx * 0.05 }}
+                    className="px-4 py-2 rounded-lg bg-[rgba(59,130,246,0.1)] border border-[#3B82F6]/30 text-[#CBD5E1] font-mono text-sm"
+                  >
+                    {tech}
+                  </motion.span>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── CONTACT SECTION ── */}
       <section id="contact" className="relative px-6 py-32 bg-[#050816] overflow-hidden">
         {/* AI-inspired background effects */}
@@ -1281,7 +1849,7 @@ export function PortfolioShell() {
               Let's Build <span className="bg-gradient-to-r from-[#38BDF8] to-[#A78BFA] bg-clip-text text-transparent">Intelligent Solutions</span> Together
             </h2>
             <p className="text-xl text-[#94A3B8] max-w-3xl mx-auto mt-6 leading-relaxed">
-              I'm currently looking for a 6-month engineering internship in Artificial Intelligence, Data Science, Quantitative Finance and Actuarial Modeling.
+              I'm currently looking for a 6-month engineering internship starting in January 2027 in Artificial Intelligence, Data Science, Quantitative Finance and Actuarial Modeling.
             </p>
             <p className="text-lg text-[#CBD5E1] max-w-3xl mx-auto mt-4">
               Open to opportunities in France, Switzerland, UK, Spain, Italy, UAE, Qatar, USA and international environments.
