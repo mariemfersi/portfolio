@@ -198,7 +198,7 @@ const timeline = [
     description: 'Multiple internships and research projects'
   },
   {
-    year: '2027',
+    year: '2026',
     title: 'International PFE Internship',
     description: 'Seeking 6-month international opportunity'
   }
@@ -358,7 +358,7 @@ export function PortfolioShell() {
                 transition={{ duration: 3, repeat: Infinity }}
               >
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                AVAILABLE FOR 6-MONTH INTERNATIONAL PFE INTERNSHIP • 2027
+                AVAILABLE FOR 6-MONTH INTERNATIONAL PFE INTERNSHIP • 2026
               </motion.div>
 
               {/* Main Title */}
@@ -852,7 +852,7 @@ export function PortfolioShell() {
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <div className="w-20 text-sm text-[#10B981] font-mono">2027</div>
+                    <div className="w-20 text-sm text-[#10B981] font-mono">2026</div>
                     <div className="flex-1">
                       <div className="text-[#F8FAFC] font-medium">Graduation</div>
                       <div className="text-sm text-[#94A3B8]">ESPRIT + Le Mans University</div>
@@ -1281,7 +1281,7 @@ export function PortfolioShell() {
               Let's Build <span className="bg-gradient-to-r from-[#38BDF8] to-[#A78BFA] bg-clip-text text-transparent">Intelligent Solutions</span> Together
             </h2>
             <p className="text-xl text-[#94A3B8] max-w-3xl mx-auto mt-6 leading-relaxed">
-              I'm currently looking for a 6-month engineering internship starting in 2027 in Artificial Intelligence, Data Science, Quantitative Finance and Actuarial Modeling.
+              I'm currently looking for a 6-month engineering internship in Artificial Intelligence, Data Science, Quantitative Finance and Actuarial Modeling.
             </p>
             <p className="text-lg text-[#CBD5E1] max-w-3xl mx-auto mt-4">
               Open to opportunities in France, Switzerland, UK, Spain, Italy, UAE, Qatar, USA and international environments.
@@ -1336,7 +1336,7 @@ export function PortfolioShell() {
                       </div>
                       <div>
                         <div className="text-sm text-[#94A3B8]">Starting</div>
-                        <div className="text-[#F8FAFC] font-semibold">2027</div>
+                        <div className="text-[#F8FAFC] font-semibold">Jan 2027</div>
                       </div>
                     </div>
                   </div>
@@ -1570,7 +1570,7 @@ export function PortfolioShell() {
       {/* Footer */}
       <footer className="px-6 py-8 border-t border-white/10 bg-[#050816]">
         <div className="mx-auto max-w-[1280px] text-center text-[#94A3B8] text-sm">
-          <p>© 2027 Mariem Fersi · Built with precision and purpose</p>
+          <p>© Mariem Fersi · Built with precision and purpose</p>
         </div>
       </footer>
     </main>
