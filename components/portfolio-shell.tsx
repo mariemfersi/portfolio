@@ -112,7 +112,7 @@ const projects = [
     results: 'Demonstrated improved calibration over traditional models, provided uncertainty estimates for risk management, and achieved comparable accuracy with better interpretability.',
     technologies: ['PyTorch', 'PyTorch Geometric', 'NGBoost', 'GLM', 'SHAP', 'MLflow', 'Docker'],
     impact: 'Deep Learning + Actuarial Science',
-    github: 'https://github.com/yourusername/deep-actuarial-modeling'
+    github: 'https://github.com/mariemfersi/Deep-Distributional-Actuarial-Modeling'
   },
   {
     id: 4,
