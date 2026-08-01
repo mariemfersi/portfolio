@@ -438,7 +438,8 @@ export function PortfolioShell() {
           </div>
 
           <a
-            href="#contact"
+            href="/cv.pdf"
+            download
             className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white text-sm font-semibold hover:from-[#2563EB] hover:to-[#0891B2] transition-all"
           >
             <Download className="w-4 h-4" />
