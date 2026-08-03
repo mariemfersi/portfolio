@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Cormorant_Garamond, Geist_Mono, Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/contexts/theme-context';
+import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
+import MicrosoftClarity from '@/components/analytics/MicrosoftClarity';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -55,6 +57,8 @@ export default function RootLayout({
       </head>
       <body className="min-h-full bg-background text-foreground transition-colors duration-300">
         <ThemeProvider>{children}</ThemeProvider>
+        <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
+        <MicrosoftClarity projectId={process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || ''} />
       </body>
     </html>
   );
