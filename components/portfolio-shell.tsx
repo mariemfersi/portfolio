@@ -94,6 +94,7 @@ const projects = [
     id: 2,
     title: 'AI Platform for Asset Valuation & Insurance Risk',
     category: 'AI Insurance',
+    status: 'In Progress',
     problem: 'Asset valuation requires extracting data from diverse documents (PDFs, Excel) and applying complex financial models. Manual processing is error-prone and time-consuming.',
     solution: 'Developed an end-to-end AI platform combining document AI for data extraction, LLM-based understanding, and automated financial modeling for DVF valuation, insurance value, and replacement cost estimation.',
     architecture: 'Document processing pipeline with OCR and LLM extraction, financial modeling engine, and web interface for automated report generation.',
@@ -125,6 +126,19 @@ const projects = [
     technologies: ['R', 'StMoMo', 'Human Mortality Database'],
     impact: 'Demographic Analysis + Mortality Forecasting',
     github: 'https://github.com/mariemfersi/Mortality-Life-Insurance-Portfolio-Analysis'
+  },
+  {
+    id: 5,
+    title: 'ClimateGuard AI',
+    category: 'AI Insurance',
+    status: 'In Progress',
+    problem: 'Property-Casualty reinsurers price catastrophe risk using vendor cat models recalibrated on 3-5 year cycles, treated as black boxes, and increasingly disconnected from the pace of climate change. Actuaries spend enormous manual effort translating model output into underwriting decisions, Solvency II reports, and treaty pricing memos.',
+    solution: 'Production-grade platform that continuously ingests physical climate data alongside exposure, claims, and financial-market data to produce a dynamically updating, climate-adjusted view of catastrophe risk. Uses an ensemble of specialized ML models (Gradient Boosting, Temporal Fusion Transformer, Graph Neural Network, Vision Transformer) fused into a portfolio loss distribution engine, wrapped in a multi-agent LLM system for autonomous report generation.',
+    architecture: 'Azure-native end-to-end platform with Azure Data Factory for ingestion, Azure Data Lake Storage (Bronze/Silver/Gold), Azure Databricks for feature engineering, Azure ML for model training/registry, Azure OpenAI for multi-agent LLM orchestration with RAG over treaty wordings and Solvency II regulation, AKS for FastAPI serving, and React/Next.js + Power BI frontend.',
+    results: 'Designed a full MLOps/LLMOps production system with CI/CD, drift detection, automatic retraining, and explainability layer (SHAP/LIME/Counterfactuals). The multi-agent system autonomously drafts treaty pricing memos, answers regulatory questions, runs natural-language "what-if" stress tests, and produces board-ready reports with full citation trail.',
+    technologies: ['Python', 'Azure', 'XGBoost', 'LightGBM', 'CatBoost', 'PyTorch', 'Temporal Fusion Transformer', 'Graph Neural Networks', 'Vision Transformer', 'Azure OpenAI', 'RAG', 'LangChain', 'FastAPI', 'React', 'Next.js', 'Power BI', 'SHAP', 'MLflow', 'Databricks', 'AKS'],
+    impact: 'Agentic AI + Climate Risk + Actuarial Science + Multi-Agent Systems',
+    github: 'https://github.com/mariemfersi/climateguard-ai'
   }
 ];
 
@@ -181,7 +195,7 @@ const leadership = [
   {
     organization: 'LEO Club Sfax Synergie',
     role: 'Former Secretary General',
-    period: '2023 - 2025',
+    period: '2019 - 2021',
     responsibilities: [
       'Coordinated volunteer projects',
       'Managed organizational activities',
@@ -271,7 +285,7 @@ const personalBrand = {
 
 // Impact Metrics
 const impactMetrics = [
-  { value: '4', label: 'Major AI & Actuarial Projects', icon: '🚀' },
+  { value: '5', label: 'Major AI & Actuarial Projects', icon: '🚀' },
   { value: '3', label: 'Professional Internships', icon: '💼' },
   { value: '4', label: 'International Certifications', icon: '🎓' },
   { value: 'Top', label: 'Academic Ranking', sublabel: 'Engineering Class Major + Ranked 2nd', icon: '⭐' },
@@ -322,8 +336,8 @@ const timeline = [
   },
   {
     year: '2026',
-    title: 'International PFE Internship',
-    description: 'Seeking 6-month international opportunity'
+    title: 'Final Year Project (FYP)',
+    description: 'Seeking 6-month opportunity worldwide'
   }
 ];
 
@@ -482,7 +496,7 @@ export function PortfolioShell() {
                 transition={{ duration: 3, repeat: Infinity }}
               >
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                AVAILABLE FOR 6-MONTH INTERNATIONAL PFE INTERNSHIP • JANUARY 2027
+                AVAILABLE FOR 6-MONTH FINAL YEAR PROJECT (FYP) • JANUARY 2027
               </motion.div>
 
               {/* Main Title */}
@@ -1371,8 +1385,15 @@ export function PortfolioShell() {
                 className="p-8 rounded-2xl bg-[rgba(255,255,255,0.05)] border border-white/10 backdrop-blur-xl hover:border-[#06B6D4]/30 transition-all group"
               >
                 <div className="flex items-start justify-between mb-6">
-                  <div>
-                    <div className="text-xs font-semibold text-[#06B6D4] mb-2 uppercase tracking-wider">{project.category}</div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="text-xs font-semibold text-[#06B6D4] uppercase tracking-wider">{project.category}</div>
+                      {project.status && (
+                        <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-[rgba(16,185,129,0.1)] border border-[#10B981]/30 text-[#10B981]">
+                          {project.status}
+                        </span>
+                      )}
+                    </div>
                     <h3 className="text-2xl font-bold text-[#F8FAFC] leading-tight pr-4">{project.title}</h3>
                   </div>
                   <a
@@ -1853,7 +1874,7 @@ export function PortfolioShell() {
               I'm currently looking for a 6-month engineering internship starting in January 2027 in Artificial Intelligence, Data Science, Quantitative Finance and Actuarial Modeling.
             </p>
             <p className="text-lg text-[#CBD5E1] max-w-3xl mx-auto mt-4">
-              Open to opportunities in France, Switzerland, UK, Spain, Italy, UAE, Qatar, USA and international environments.
+              Open to worldwide opportunities.
             </p>
             <div className="w-20 h-1 bg-gradient-to-r from-[#38BDF8] to-[#A78BFA] rounded-full mx-auto mt-8" />
           </motion.div>
@@ -1943,8 +1964,8 @@ export function PortfolioShell() {
                   <div className="flex items-center gap-3">
                     <Globe className="w-5 h-5 text-[#38BDF8]" />
                     <div>
-                      <div className="text-[#F8FAFC] font-medium">Open to International Opportunities</div>
-                      <div className="text-sm text-[#94A3B8]">France, Switzerland, UK, Spain, Italy, UAE, Qatar, USA</div>
+                      <div className="text-[#F8FAFC] font-medium">Open to Worldwide Opportunities</div>
+                      <div className="text-sm text-[#94A3B8]">Global availability</div>
                     </div>
                   </div>
                 </div>
