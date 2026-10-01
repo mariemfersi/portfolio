@@ -17,7 +17,6 @@ const projectVisuals = [
     flow: ['Signals', 'Agents + RAG', 'Explainable view'],
   },
   {
-    icon: FileText,
     icon: Layers3,
     caption: 'CLIMATE RISK → UNDERWRITING',
     flow: ['Exposure data', 'Hazard / loss', 'Risk insight'],
