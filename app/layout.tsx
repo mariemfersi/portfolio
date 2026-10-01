@@ -1,48 +1,71 @@
-import type { Metadata } from 'next';
-import { Cormorant_Garamond, Geist_Mono, Inter } from 'next/font/google';
+import type { Metadata, Viewport } from 'next';
+import { Cormorant_Garamond, Manrope } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/contexts/theme-context';
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
 import MicrosoftClarity from '@/components/analytics/MicrosoftClarity';
 
-const inter = Inter({
-  variable: '--font-inter',
+const manrope = Manrope({
+  variable: '--font-manrope',
   subsets: ['latin'],
+  display: 'swap',
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: '--font-cormorant',
+const cormorantGaramond = Cormorant_Garamond({
+  variable: '--font-cormorant-garamond',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+const SITE = {
+  title: 'Mariem Fersi | Data Science Engineer — AI · Actuarial Science',
+  description:
+    'Mariem Fersi builds decision-ready AI, data and risk solutions—combining engineering with actuarial rigor. Available now for a 6-month international Final-Year Internship (PFE).',
+  url: 'https://mariemfersi.com',
+};
 
 export const metadata: Metadata = {
-  title: 'Mariem Fersi | AI Engineer & Creative Developer',
-  description: 'Portfolio of Mariem Fersi, AI Engineering Student specializing in Artificial Intelligence, Machine Learning, Business Intelligence, Web Development and Creative Digital Experiences.',
-  keywords: ['Mariem Fersi', 'AI Engineer', 'Artificial Intelligence', 'Machine Learning', 'React Developer', 'Portfolio', 'Business Intelligence', 'Power BI', 'Data Science', 'Web Development', 'Actuarial Science'],
+  metadataBase: new URL(SITE.url),
+  title: {
+    default: SITE.title,
+    template: '%s | Mariem Fersi',
+  },
+  description: SITE.description,
+  keywords: [
+    'Mariem Fersi',
+    'Data Science Engineer',
+    'AI Engineer Intern',
+    'Data Scientist Intern',
+    'Machine Learning Intern',
+    'Data Engineering Intern',
+    'Actuarial Data Scientist',
+    'AI Internship 2027',
+    'PFE Data Science',
+    'PFE AI',
+    'International Data Science Internship',
+    'ESPRIT',
+    'Actuarial Science',
+    'Quantitative Finance',
+  ],
   authors: [{ name: 'Mariem Fersi' }],
+  robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
-    title: 'Mariem Fersi | AI Engineer & Creative Developer',
-    description: 'AI Engineering Student passionate about Artificial Intelligence, Business Intelligence, Web Development and Creative Digital Experiences.',
-    images: ['/preview.png'],
-    url: 'https://mariemfersi.com',
+    title: SITE.title,
+    description: SITE.description,
+    url: SITE.url,
+    images: [{ url: '/images/mariem (2).png', alt: 'Mariem Fersi — Data Science Engineer' }],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Mariem Fersi | AI Engineer & Creative Developer',
-    description: 'AI Engineering Student passionate about Artificial Intelligence, Business Intelligence, Web Development and Creative Digital Experiences.',
-    images: ['/preview.png'],
+    card: 'summary',
+    title: SITE.title,
+    description: SITE.description,
+    images: ['/images/mariem (2).png'],
   },
 };
 
-export const viewport = {
-  themeColor: '#05010D',
+export const viewport: Viewport = {
+  themeColor: '#F7F4EE',
 };
 
 export default function RootLayout({
@@ -51,11 +74,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${cormorant.variable} ${geistMono.variable} h-full antialiased`}>
+    <html lang="en" className={`${manrope.variable} ${cormorantGaramond.variable} h-full antialiased`}>
       <head>
-        <link rel="icon" type="image/svg+xml" href="/horse-icon.svg" />
+        <link rel="icon" type="image/svg+xml" href="/icon.svg" />
       </head>
-      <body className="min-h-full bg-background text-foreground transition-colors duration-300">
+      <body className="min-h-full bg-background text-foreground">
         <ThemeProvider>{children}</ThemeProvider>
         <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
         <MicrosoftClarity projectId={process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || ''} />
