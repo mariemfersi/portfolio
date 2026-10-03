@@ -1,10 +1,12 @@
 'use client';
 
-import { Award, GraduationCap } from 'lucide-react';
+import { Award, ArrowUpRight, GraduationCap } from 'lucide-react';
+import { motion, useReducedMotion } from 'framer-motion';
 import { academicExcellence, education, experience } from '@/lib/portfolio-data';
 
 export function Milestones() {
   const chronologicalExperience = [...experience].reverse();
+  const reduceMotion = useReducedMotion();
 
   return (
     <section
@@ -20,15 +22,28 @@ export function Milestones() {
           </p>
         </div>
 
-        <div className="grid gap-4 lg:grid-cols-3">
-          {chronologicalExperience.map((job) => (
-            <article key={job.company} className="rounded-2xl border border-line bg-page-2 p-5 sm:p-6">
+        <div className="relative grid gap-4 lg:grid-cols-3">
+          <div className="absolute left-8 right-8 top-8 hidden h-px bg-line-strong lg:block" aria-hidden />
+          {chronologicalExperience.map((job, index) => (
+            <motion.article
+              key={job.company}
+              initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.45, delay: reduceMotion ? 0 : index * 0.1 }}
+              className="relative rounded-2xl border border-line bg-page-2 p-5 transition duration-300 hover:-translate-y-1 hover:border-brand/35 hover:shadow-[0_16px_40px_-28px_rgba(23,32,51,0.28)] sm:p-6"
+            >
               <div className="flex items-start justify-between gap-3">
-                <div>
-                  <h3 className="font-display text-xl font-semibold text-ink">{job.company}</h3>
-                  <p className="mt-1 text-sm text-brand-2">{job.role}</p>
+                <div className="flex items-center gap-3">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-brand/20 bg-page font-mono text-xs font-bold text-brand-2">
+                    0{index + 1}
+                  </span>
+                  <div>
+                    <h3 className="font-display text-xl font-semibold text-ink">{job.company}</h3>
+                    <p className="mt-1 text-sm text-brand-2">{job.role}</p>
+                  </div>
                 </div>
-                <span className="whitespace-nowrap rounded-full border border-line-strong px-2.5 py-1 text-xs text-ink-muted">
+                <span className="whitespace-nowrap rounded-full border border-line-strong bg-page px-2.5 py-1 text-xs text-ink-muted">
                   {job.period}
                 </span>
               </div>
@@ -41,7 +56,11 @@ export function Milestones() {
                   </li>
                 ))}
               </ul>
-            </article>
+              <div className="mt-5 flex items-center gap-2 border-t border-line pt-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-ink-faint">
+                Chapter 0{index + 1}
+                {index < chronologicalExperience.length - 1 && <ArrowUpRight className="h-3.5 w-3.5 text-brand" />}
+              </div>
+            </motion.article>
           ))}
         </div>
 

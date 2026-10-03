@@ -93,7 +93,7 @@ export function Pill({
 }) {
   const tones: Record<string, string> = {
     brand: 'border-brand/40 bg-brand-soft text-brand-2',
-    teal: 'border-teal/40 bg-teal-soft text-teal',
+    teal: 'border-teal/40 bg-teal-soft text-ink',
     emerald: 'border-emerald/40 bg-emerald/10 text-emerald',
     neutral: 'border-line-strong bg-white/5 text-ink-2',
   };

@@ -21,7 +21,7 @@ import { projects, type Project, type BuildStatus } from '@/lib/portfolio-data';
 const statusStyle: Record<BuildStatus, string> = {
   'In progress': 'border-brand/40 bg-brand-soft text-brand-2',
   Implemented: 'border-emerald/40 bg-emerald/10 text-emerald',
-  Prototype: 'border-amber/40 bg-amber/10 text-amber',
+  Prototype: 'border-amber/40 bg-amber/10 text-ink',
   'Research / Proposed': 'border-brand/40 bg-brand-soft text-brand-2',
 };
 
@@ -61,7 +61,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 {project.domain}
               </div>
               {flagship && (
-                <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-amber">
+                <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-2">
                   ★ Flagship research project
                 </div>
               )}
